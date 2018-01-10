@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script>
+function page1()
+
+
+{
+var page = document.getElementById("picture");
+var left = 1;
+page.style.position = "absolute";
+function towardsRight()
+
+{	
+left =left+1;
+if (left<=900)
+{page.style.left = left+"px";} 
+else 
+
+{
+clearInterval(intervalTowardsRight);
+intervalTowardsLeft = setInterval(towardsLeft, 14);
+}  
+
+}
+function towardsLeft()
+
+{
+if (left>=0)
+{
+left -=1;
+page.style.left = left+"px";} 
+else
+
+{
+clearInterval(intervalTowardsLeft);
+intervalTowardsRight = setInterval(towardsRight,16);
+}
+
+}
+
+
+intervalTowardsRight = setInterval(towardsRight,21);   
+}
+</script>
+
+<center><div style="color:#FFFF00">
+<h1><em><p>&#9830;Task 1</p></em></h1></div><center>
+<center><h1 style="font-family:cursive"><font-size:130%> <font color="orange"><q>;) Capture a video from your cell phone indroducing yourself ;)</q></font></font></h1></center>
+<p style="color:yellow" ><q>This idea of introducing our self through capturing a video and making it centre of a web page is a brilliant idea which gives a new look webpage.</q></p>
+</head>
+<body onload="page1();" body background="sky.png">
+<div id=""float:middle;padding:13px" > 
+<video width="300" height="250" controls>
+<source src="manoj.mp4" type="video/mp4">
+</div>
+<script type="text/javascript">
+towardsRight()
+towardsLeft()
+</script>
+<a href="Task2.html" style="float: right;" target="Task2"><font color="red"><h1>Next</h1></font></a>
+<a href="Task1.html" style="float: left;" target="Task1"><font color="red"><h1>Previous</h1></font></a>
+<center><a href="Intro.html" style="float: middle;" target="Intro"><font color="red"><h1>Home</h1></font></a></center>
+<p align='center'><img src="eiu.png" alt="EIU Icon" style="width:128px;height:128px;"></P>
+</body>
+</html>
